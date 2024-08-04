@@ -8,30 +8,30 @@
 import SwiftUI
 
 struct GroupBoxSample: View {
-    var body: some View {
-        VStack {
+  var body: some View {
+    VStack {
             
-            GroupBox("Title") {
-                Text(
-                    "This is a GroupBox. Similar to a Card in Material Design and I love it!"
-                )
-            }
-            .frame(width: 200)
+      GroupBox("Title") {
+        Text(
+          "This is a GroupBox. Similar to a Card in Material Design and I love it!"
+        )
+      }
+      .frame(width: 200)
             
-            GroupBox {
-                Text(
-                    "This is a GroupBox. Similar to a Card in Material Design and I love it!"
-                )
+      GroupBox {
+        Text(
+          "This is a GroupBox. Similar to a Card in Material Design and I love it!"
+        )
                 
-            } label: {
-                Label("Title", systemImage: "airplane")
-            }
+      } label: {
+        Label("Title", systemImage: "airplane")
+      }
             
-        }
-        .padding()
     }
+    .padding()
+  }
 }
 
 #Preview {
-    GroupBoxSample()
+  GroupBoxSample()
 }

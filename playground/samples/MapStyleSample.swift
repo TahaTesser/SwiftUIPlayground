@@ -9,18 +9,18 @@ import SwiftUI
 import MapKit
 
 struct MapStyleSample: View {
-    let location = CLLocationCoordinate2D(
-        latitude: 41.8902, longitude: 12.4922
-    )
+  let location = CLLocationCoordinate2D(
+    latitude: 41.8902, longitude: 12.4922
+  )
     
-    var body: some View {
-        Map {
-            Marker("Colosseum", coordinate: location)
-        }
-        .mapStyle(.standard(elevation: .realistic))
+  var body: some View {
+    Map {
+      Marker("Colosseum", coordinate: location)
     }
+    .mapStyle(.standard(elevation: .realistic))
+  }
 }
 
 #Preview {
-    MapStyleSample()
+  MapStyleSample()
 }

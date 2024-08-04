@@ -3,8 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		04AA7C1F2C5FFF4200EF3687 /* JunoUI in Frameworks */ = {isa = PBXBuildFile; productRef = 04AA7C1E2C5FFF4200EF3687 /* JunoUI */; };
+		04AA7C212C6001DD00EF3687 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04AA7C202C6001D800EF3687 /* README.md */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		04AA7BD12C5FEDC700EF3687 /* PBXContainerItemProxy */ = {
@@ -27,10 +32,34 @@
 		04AA7BBD2C5FEDC400EF3687 /* playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AA7BD02C5FEDC700EF3687 /* playgroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playgroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AA7BDA2C5FEDC700EF3687 /* playgroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playgroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AA7C202C6001D800EF3687 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		04AA7C092C5FF49100EF3687 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				samples/GroupBoxSample.swift,
+				samples/JunoUISliderSample.swift,
+				samples/MapStyleSample.swift,
+				samples/RotatedGestureSample.swift,
+			);
+			target = 04AA7BCF2C5FEDC700EF3687 /* playgroundTests */;
+		};
+		04AA7C0A2C5FF49100EF3687 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				samples/GroupBoxSample.swift,
+				samples/JunoUISliderSample.swift,
+				samples/MapStyleSample.swift,
+				samples/RotatedGestureSample.swift,
+			);
+			target = 04AA7BD92C5FEDC700EF3687 /* playgroundUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		04AA7BBF2C5FEDC400EF3687 /* playground */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = playground; sourceTree = "<group>"; };
+		04AA7BBF2C5FEDC400EF3687 /* playground */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (04AA7C092C5FF49100EF3687 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 04AA7C0A2C5FF49100EF3687 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = playground; sourceTree = "<group>"; };
 		04AA7BD32C5FEDC700EF3687 /* playgroundTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = playgroundTests; sourceTree = "<group>"; };
 		04AA7BDD2C5FEDC700EF3687 /* playgroundUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = playgroundUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -40,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AA7C1F2C5FFF4200EF3687 /* JunoUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +93,7 @@
 		04AA7BB42C5FEDC400EF3687 = {
 			isa = PBXGroup;
 			children = (
+				04AA7C202C6001D800EF3687 /* README.md */,
 				04AA7BBF2C5FEDC400EF3687 /* playground */,
 				04AA7BD32C5FEDC700EF3687 /* playgroundTests */,
 				04AA7BDD2C5FEDC700EF3687 /* playgroundUITests */,
@@ -100,6 +131,7 @@
 			);
 			name = playground;
 			packageProductDependencies = (
+				04AA7C1E2C5FFF4200EF3687 /* JunoUI */,
 			);
 			productName = playground;
 			productReference = 04AA7BBD2C5FEDC400EF3687 /* playground.app */;
@@ -183,6 +215,9 @@
 				Base,
 			);
 			mainGroup = 04AA7BB42C5FEDC400EF3687;
+			packageReferences = (
+				04AA7C1D2C5FFF1000EF3687 /* XCRemoteSwiftPackageReference "JunoSlider" */,
+			);
 			productRefGroup = 04AA7BBE2C5FEDC400EF3687 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -199,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AA7C212C6001DD00EF3687 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"playground/Preview Content\"";
+				DEVELOPMENT_TEAM = BT2TPGG8FS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -416,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"playground/Preview Content\"";
+				DEVELOPMENT_TEAM = BT2TPGG8FS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -570,6 +608,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04AA7C1D2C5FFF1000EF3687 /* XCRemoteSwiftPackageReference "JunoSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/christianselig/JunoSlider.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04AA7C1E2C5FFF4200EF3687 /* JunoUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04AA7C1D2C5FFF1000EF3687 /* XCRemoteSwiftPackageReference "JunoSlider" */;
+			productName = JunoUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04AA7BB52C5FEDC400EF3687 /* Project object */;
 }

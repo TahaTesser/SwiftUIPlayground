@@ -15,6 +15,8 @@ struct ContentView: View {
     "JunoUI Slider": AnyView(JunoUISliderSample()),
     "Button Border Shape": AnyView(ButtonBorderShapeSample()),
     "Rule View": AnyView(RuleViewSample()),
+    "Container Relative Frame": AnyView(ContainerRelativeFrameSample()),
+    "Compsiting Group": AnyView(CompsitingGroupSample()),
   ]
     
   let columns = [

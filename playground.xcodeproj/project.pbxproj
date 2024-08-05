@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04AA7C1F2C5FFF4200EF3687 /* JunoUI in Frameworks */ = {isa = PBXBuildFile; productRef = 04AA7C1E2C5FFF4200EF3687 /* JunoUI */; };
 		04AA7C212C6001DD00EF3687 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04AA7C202C6001D800EF3687 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AA7C1F2C5FFF4200EF3687 /* JunoUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +131,6 @@
 			);
 			name = playground;
 			packageProductDependencies = (
-				04AA7C1E2C5FFF4200EF3687 /* JunoUI */,
 			);
 			productName = playground;
 			productReference = 04AA7BBD2C5FEDC400EF3687 /* playground.app */;
@@ -218,7 +215,6 @@
 			);
 			mainGroup = 04AA7BB42C5FEDC400EF3687;
 			packageReferences = (
-				04AA7C1D2C5FFF1000EF3687 /* XCRemoteSwiftPackageReference "JunoSlider" */,
 			);
 			productRefGroup = 04AA7BBE2C5FEDC400EF3687 /* Products */;
 			projectDirPath = "";
@@ -610,25 +606,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		04AA7C1D2C5FFF1000EF3687 /* XCRemoteSwiftPackageReference "JunoSlider" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/christianselig/JunoSlider.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		04AA7C1E2C5FFF4200EF3687 /* JunoUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 04AA7C1D2C5FFF1000EF3687 /* XCRemoteSwiftPackageReference "JunoSlider" */;
-			productName = JunoUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04AA7BB52C5FEDC400EF3687 /* Project object */;
 }

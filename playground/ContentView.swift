@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
   let samples: [String: AnyView] = [
-    "Rotate Gesture": AnyView(RotatedGestureSample()),
+    "Rotate Gesture": AnyView(RotateGestureSample()),
     "MapStyle": AnyView(MapStyleSample()),
     "GroupBox": AnyView(GroupBoxSample()),
     "JunoUI Slider": AnyView(JunoUISliderSample()),
+    "Button Border Shape": AnyView(ButtonBorderShapeSample()),
   ]
     
   let columns = [
@@ -32,6 +33,7 @@ struct ContentView: View {
               VStack {
                 Text(sampleKey)
                   .font(.headline)
+                  .multilineTextAlignment(.center)
                   .foregroundColor(.primary)
                   .padding(.horizontal)
                   .padding(.vertical, 10)

@@ -46,6 +46,7 @@
 				samples/MapStyleSample.swift,
 				samples/RotateGestureSample.swift,
 				samples/RuleViewSample.swift,
+				samples/TableSample.swift,
 			);
 			target = 04AA7BCF2C5FEDC700EF3687 /* playgroundTests */;
 		};
@@ -60,6 +61,7 @@
 				samples/MapStyleSample.swift,
 				samples/RotateGestureSample.swift,
 				samples/RuleViewSample.swift,
+				samples/TableSample.swift,
 			);
 			target = 04AA7BD92C5FEDC700EF3687 /* playgroundUITests */;
 		};

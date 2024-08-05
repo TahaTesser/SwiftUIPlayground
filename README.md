@@ -5,6 +5,12 @@
 > This is a collection of Swift/SwiftUI samples. It includes code snippets, examples, and exercises that I have collected from various sources and created myself.
 > I have created this repository to help me learn Swift and SwiftUI. I hope it will be useful to others as well.
 
+### Minimum Deployments
+
+- iOS: 18.0
+- macOS: 14.0
+- visionOS: 2.0
+
 ### Preview
 
 |  Samples List | Sample Preview |

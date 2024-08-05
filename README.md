@@ -6,7 +6,11 @@
 > I have created this repository to help me learn Swift and SwiftUI. I hope it will be useful to others as well.
 
 ### Preview
-![Screenshot](/screenshots/screenshot.png)
+
+|  Samples List | Sample Preview |
+| --------------- | --------------- |
+| <img src="./screenshots/screenshot_0.png" /> | <img src="./screenshots/screenshot_1.png" /> |
+
 
 ### Credits and References
 - [Enid](https://x.com/ios_dev_alb)

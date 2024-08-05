@@ -18,6 +18,7 @@ struct ContentView: View {
     "Container Relative Frame": AnyView(ContainerRelativeFrameSample()),
     "Compsiting Group": AnyView(CompsitingGroupSample()),
     "Table": AnyView(TableSample()),
+    "Text Renderer": AnyView(TextRendererSample()),
   ]
     
   let columns = [

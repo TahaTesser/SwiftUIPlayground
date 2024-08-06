@@ -21,6 +21,7 @@ struct ContentView: View {
     "Text Renderer": AnyView(TextRendererSample()),
     "Tab View": AnyView(TabViewSample()),
     "Tab View Style": AnyView(TabViewStyleSample()),
+    "Async Image": AnyView(AsyncImageSample()),
   ]
     
   let columns = [

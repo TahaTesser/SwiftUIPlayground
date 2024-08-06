@@ -38,6 +38,7 @@
 		04AA7C092C5FF49100EF3687 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				samples/AsyncImageSample.swift,
 				samples/ButtonBorderShapeSample.swift,
 				samples/CompsitingGroupSample.swift,
 				samples/ContainerRelativeFrameSample.swift,
@@ -56,6 +57,7 @@
 		04AA7C0A2C5FF49100EF3687 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				samples/AsyncImageSample.swift,
 				samples/ButtonBorderShapeSample.swift,
 				samples/CompsitingGroupSample.swift,
 				samples/ContainerRelativeFrameSample.swift,

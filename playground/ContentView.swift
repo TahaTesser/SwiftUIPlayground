@@ -29,7 +29,7 @@ struct ContentView: View {
   ]
     
   var body: some View {
-    NavigationView {
+    NavigationStack {
       ScrollView {
         LazyVGrid(columns: columns, spacing: 16) {
           ForEach(

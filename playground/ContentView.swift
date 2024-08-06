@@ -19,6 +19,8 @@ struct ContentView: View {
     "Compsiting Group": AnyView(CompsitingGroupSample()),
     "Table": AnyView(TableSample()),
     "Text Renderer": AnyView(TextRendererSample()),
+    "Tab View": AnyView(TabViewSample()),
+    "Tab View Style": AnyView(TabViewStyleSample()),
   ]
     
   let columns = [

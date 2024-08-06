@@ -14,10 +14,13 @@
 
 ### Preview
 
-|  Samples List | Sample Preview |
+|  iOS Preview 1 | iOS Preview 2 |
 | --------------- | --------------- |
 | <img src="./screenshots/screenshot_0.png" /> | <img src="./screenshots/screenshot_1.png" /> |
 
+| iPadOS Preview |
+| --------------- |
+| <img src="./screenshots/screenshot_2.png" /> |
 
 ### Credits and References
 - [Enid](https://x.com/ios_dev_alb)

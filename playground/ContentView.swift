@@ -24,6 +24,7 @@ struct ContentView: View {
     "Async Image": AnyView(AsyncImageSample()),
     "Form": AnyView(FormSample()),
     "Disclosure Group": AnyView(DisclosureGroupSample()),
+    "Variable Value": AnyView(VariableValueSample()),
   ]
     
   let columns = [

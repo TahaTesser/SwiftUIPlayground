@@ -23,6 +23,7 @@ struct ContentView: View {
     "Tab View Style": AnyView(TabViewStyleSample()),
     "Async Image": AnyView(AsyncImageSample()),
     "Form": AnyView(FormSample()),
+    "Disclosure Group": AnyView(DisclosureGroupSample()),
   ]
     
   let columns = [

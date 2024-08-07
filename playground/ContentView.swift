@@ -14,7 +14,6 @@ struct ContentView: View {
     "GroupBox": AnyView(GroupBoxSample()),
     "JunoUI Slider": AnyView(JunoUISliderSample()),
     "Button Border Shape": AnyView(ButtonBorderShapeSample()),
-    "Rule View": AnyView(RuleViewSample()),
     "Container Relative Frame": AnyView(ContainerRelativeFrameSample()),
     "Compsiting Group": AnyView(CompsitingGroupSample()),
     "Table": AnyView(TableSample()),

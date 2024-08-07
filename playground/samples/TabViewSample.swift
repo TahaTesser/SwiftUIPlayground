@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabViewSample: View {
   var body: some View {
-    TabView{
+    TabView {
       Tab("Feed", systemImage: "rectangle.stack.fill") {
         Text("Feed Page")
           .font(.headline)

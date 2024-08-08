@@ -18,13 +18,13 @@
 | --------------- | --------------- |
 | <img src="./screenshots/screenshot_0.png" /> | <img src="./screenshots/screenshot_1.png" /> |
 
-| iPadOS Preview |
-| --------------- |
-| <img src="./screenshots/screenshot_2.png" /> |
+| iPadOS Preview 1 | iPadOS Preview 2 |
+| --------------- | --------------- |
+| <img src="./screenshots/screenshot_2.png" /> | <img src="./screenshots/screenshot_3.png" /> |
 
 | macOS Preview 1 | macOS Preview 2 |
 | --------------- | --------------- |
-| <img src="./screenshots/screenshot_3.png" /> | <img src="./screenshots/screenshot_4.png" /> |
+| <img src="./screenshots/screenshot_4.png" /> | <img src="./screenshots/screenshot_5.png" /> |
 
 ### Credits and References
 - [Enid](https://x.com/ios_dev_alb)

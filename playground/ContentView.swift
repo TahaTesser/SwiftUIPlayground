@@ -8,61 +8,92 @@
 import SwiftUI
 
 struct ContentView: View {
-  let samples: [String: AnyView] = [
-    "Rotate Gesture": AnyView(RotateGestureSample()),
-    "MapStyle": AnyView(MapStyleSample()),
-    "GroupBox": AnyView(GroupBoxSample()),
-    "JunoUI Slider": AnyView(JunoUISliderSample()),
-    "Button Border Shape": AnyView(ButtonBorderShapeSample()),
-    "Container Relative Frame": AnyView(ContainerRelativeFrameSample()),
-    "Compsiting Group": AnyView(CompsitingGroupSample()),
-    "Table": AnyView(TableSample()),
-    "Text Renderer": AnyView(TextRendererSample()),
-    "Tab View": AnyView(TabViewSample()),
-    "Tab View Style": AnyView(TabViewStyleSample()),
-    "Async Image": AnyView(AsyncImageSample()),
-    "Form": AnyView(FormSample()),
-    "Disclosure Group": AnyView(DisclosureGroupSample()),
-    "Variable Value": AnyView(VariableValueSample()),
-  ]
-    
-  let columns = [
-    GridItem(.flexible(), spacing: 16),
-    GridItem(.flexible(), spacing: 16)
+  let samplesType: [String: AnyView] = [
+    "Buttons": AnyView(SamplesList(
+      title: "Buttons", samples:
+        [
+          "Button Border Shape": AnyView(ButtonBorderShapeSample()),
+        ]
+    )),
+    "Map": AnyView(SamplesList(
+      title: "Map", samples:
+        [
+          "MapStyle": AnyView(MapStyleSample()),
+        ]
+    )),
+    "Gesture": AnyView(SamplesList(
+      title: "Gesture", samples:
+        [
+          "Rotate Gesture": AnyView(RotateGestureSample()),
+        ]
+    )),
+    "GroupBox": AnyView(SamplesList(
+      title: "GroupBox", samples:
+        [
+          "GroupBox": AnyView(GroupBoxSample()),
+        ]
+    )),
+    "Third party": AnyView(SamplesList(
+      title: "Third party", samples:
+        [
+          "JunoUI Slider": AnyView(JunoUISliderSample()),
+        ]
+    )),
+    "Layout Adjustments": AnyView(SamplesList(
+      title: "Layout Adjustments", samples:
+        [
+          "Container Relative Frame": AnyView(ContainerRelativeFrameSample()),
+        ]
+    )),
+    "Drawing and Graphics": AnyView(SamplesList(
+      title: "Drawing and Graphics", samples:
+        [
+          "Compsiting Group": AnyView(CompsitingGroupSample()),
+        ]
+    )),
+    "Tables": AnyView(SamplesList(
+      title: "Tables", samples:
+        [
+          "Table": AnyView(TableSample()),
+        ]
+    )),
+    "Text": AnyView(SamplesList(
+      title: "Text", samples:
+        [
+          "Text Renderer": AnyView(TextRendererSample()),
+        ]
+    )),
+    "Navigation": AnyView(SamplesList(
+      title: "Navigation", samples:
+        [
+          "Tab View": AnyView(TabViewSample()),
+          "Tab View Style": AnyView(TabViewStyleSample()),
+        ]
+    )),
+    "Images": AnyView(SamplesList(
+      title: "Navigation", samples:
+        [
+          "Async Image": AnyView(AsyncImageSample()),
+          "Variable Value": AnyView(VariableValueSample()),
+        ]
+    )),
+    "View Groupings": AnyView(SamplesList(
+      title: "View Groupings", samples:
+        [
+          "Form": AnyView(FormSample()),
+        ]
+    )),
+    "Lists": AnyView(SamplesList(
+      title: "Lists", samples:
+        [
+          "Disclosure Group": AnyView(DisclosureGroupSample()),
+        ]
+    )),
   ]
     
   var body: some View {
     NavigationStack {
-      ScrollView {
-        LazyVGrid(columns: columns, spacing: 16) {
-          ForEach(
-            Array(samples.keys.sorted()),
-            id: \.self
-          ) { sampleKey in
-            NavigationLink(destination: samples[sampleKey]) {
-              VStack {
-                Text(sampleKey)
-                  .font(.headline)
-                  .multilineTextAlignment(.center)
-                  .foregroundColor(.primary)
-                  .padding(.horizontal)
-                  .padding(.vertical, 10)
-                  .frame(height: 100)
-                  .frame(maxWidth: .infinity)
-                  .background(Color.blue.opacity(0.1))
-                  .cornerRadius(10)
-                  .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                      .stroke(Color.blue, lineWidth: 1)
-                  )
-              }
-            }
-            .buttonStyle(PlainButtonStyle())
-          }
-        }
-        .padding()
-      }
-      .navigationTitle("Swift Playground")
+      SamplesList(title: "Swift Playground", samples: samplesType)
     }
   }
 }

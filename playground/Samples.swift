@@ -25,7 +25,7 @@ public let samples: [String: AnyView] = [
   "Gesture": AnyView(SamplesList(
     title: "Gesture", samples:
       [
-        // https://developer.apple.com/documentation/swiftui/rotationgesture
+        // https://developer.apple.com/documentation/swiftui/rotategesture
         "Rotate Gesture": AnyView(RotateGestureSample()),
       ]
   )),

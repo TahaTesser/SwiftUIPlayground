@@ -49,6 +49,7 @@
 				Samples/Map/MapStyleSample.swift,
 				Samples/Navigation/TabViewSample.swift,
 				Samples/Navigation/TabViewStyleSample.swift,
+				Samples/Slider/SliderSample.swift,
 				Samples/Tables/TableSample.swift,
 				Samples/Text/TextRendererSample.swift,
 				Samples/ThirdParty/JunoUISliderSample.swift,
@@ -70,6 +71,7 @@
 				Samples/Map/MapStyleSample.swift,
 				Samples/Navigation/TabViewSample.swift,
 				Samples/Navigation/TabViewStyleSample.swift,
+				Samples/Slider/SliderSample.swift,
 				Samples/Tables/TableSample.swift,
 				Samples/Text/TextRendererSample.swift,
 				Samples/ThirdParty/JunoUISliderSample.swift,
@@ -506,6 +508,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BT2TPGG8FS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -528,6 +531,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BT2TPGG8FS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -549,6 +553,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BT2TPGG8FS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -570,6 +575,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BT2TPGG8FS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;

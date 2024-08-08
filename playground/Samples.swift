@@ -29,13 +29,6 @@ public let samples: [String: AnyView] = [
         "Rotate Gesture": AnyView(RotateGestureSample()),
       ]
   )),
-  "GroupBox": AnyView(SamplesList(
-    title: "GroupBox", samples:
-      [
-        // https://developer.apple.com/documentation/swiftui/groupbox
-        "GroupBox": AnyView(GroupBoxSample()),
-      ]
-  )),
   "Third party": AnyView(SamplesList(
     title: "Third party", samples:
       [
@@ -94,6 +87,8 @@ public let samples: [String: AnyView] = [
       [
         // https://developer.apple.com/documentation/swiftui/form
         "Form": AnyView(FormSample()),
+        // https://developer.apple.com/documentation/swiftui/groupbox
+        "GroupBox": AnyView(GroupBoxSample()),
       ]
   )),
   "Lists": AnyView(SamplesList(
@@ -101,6 +96,13 @@ public let samples: [String: AnyView] = [
       [
         // https://developer.apple.com/documentation/swiftui/disclosuregroup
         "Disclosure Group": AnyView(DisclosureGroupSample()),
+      ]
+  )),
+  "Slider": AnyView(SamplesList(
+    title: "Slider", samples:
+      [
+        // https://developer.apple.com/documentation/swiftui/slider
+        "Slider": AnyView(SliderSample()),
       ]
   )),
 ]

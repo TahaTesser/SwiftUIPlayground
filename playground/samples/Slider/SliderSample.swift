@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SliderSample: View {
-  @State private var sliderValue = 50.0
-  @State private var isEditing = false
+  @State var sliderValue = 50.0
+  @State var isEditing = false
   
     var body: some View {
       VStack {

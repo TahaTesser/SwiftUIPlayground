@@ -25,6 +25,10 @@
 | --------------- | --------------- |
 | <img src="./docs//screenshots/screenshot_4.png" /> | <img src="./docs//screenshots/screenshot_5.png" /> |
 
+| visionOS Preview 1 | visionOS Preview 2 |
+| --------------- | --------------- |
+| <img src="./docs//screenshots/screenshot_6.png" /> | <img src="./docs//screenshots/screenshot_7.png" /> |
+
 ### Credits and References
 - [Enid](https://x.com/ios_dev_alb)
 - [JunoSlider](https://github.com/christianselig/JunoSlider)

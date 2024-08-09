@@ -12,6 +12,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
+    # Create a job that runs on macOS
     name: Test
     runs-on: macos-latest
     steps:

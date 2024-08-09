@@ -96,6 +96,8 @@ public let samples: [String: AnyView] = [
       [
         // https://developer.apple.com/documentation/swiftui/disclosuregroup
         "Disclosure Group": AnyView(DisclosureGroupSample()),
+        // https://developer.apple.com/documentation/swiftui/listsectionspacing
+        "List Section Spacing": AnyView(ListSectionSpacingSample()),
       ]
   )),
   "Slider": AnyView(SamplesList(

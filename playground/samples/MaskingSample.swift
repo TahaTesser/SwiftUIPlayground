@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MaskingSample: View {
   var body: some View {
-    Image(.park)
+    Image("park")
       .resizable()
       .scaledToFit()
       .ignoresSafeArea()

@@ -48,6 +48,8 @@ public let samples: [String: AnyView] = [
       [
         // https://developer.apple.com/documentation/swiftui/view/compositinggroup()
         "Compsiting Group": AnyView(CompsitingGroupSample()),
+        // https://developer.apple.com/documentation/swiftui/view/mask(alignment:_:)
+        "Masking": AnyView(MaskingSample()),
       ]
   )),
   "Tables": AnyView(SamplesList(

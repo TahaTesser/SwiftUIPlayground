@@ -34,3 +34,4 @@
 - [JunoSlider](https://github.com/christianselig/JunoSlider)
 - [Alberto Moral](https://x.com/AlbertMoral)
 - [Hacking with Swift](https://www.hackingwithswift.com/)
+- [Natalia Panferova](https://x.com/natpanferova)

@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {    
-  var body: some View {
-    NavigationStack {
-      SamplesList(title: "Swift Playground", samples: samples)
+struct ContentView: View {
+    var body: some View {
+        NavigationStack {
+            SamplesList(title: "Swift Playground", samples: samples)
+        }
     }
-  }
 }
 
 #Preview {
-  ContentView()
+    ContentView()
 }

@@ -8,9 +8,5 @@
 import Testing
 
 struct playgroundTests {
-
-    @Test func example() async throws {
-      
-    }
-
+    @Test func example() async throws {}
 }

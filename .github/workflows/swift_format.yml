@@ -1,0 +1,27 @@
+name: SwiftFormat
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  swiftformat:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install SwiftFormat
+      run: brew install swiftformat
+
+    - name: Run SwiftFormat
+      run: |
+        swiftformat .
+        if [[ `git status --porcelain` ]]; then
+          echo "SwiftFormat made changes. Failing the workflow."
+          git diff
+          exit 1
+        else
+          echo "SwiftFormat check passed."
+        fi

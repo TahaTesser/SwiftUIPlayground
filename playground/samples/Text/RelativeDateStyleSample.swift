@@ -1,5 +1,5 @@
 //
-//  DynamicDatesSample.swift
+//  RelativeDateStyleSample.swift
 //  playground
 //
 //  Created by Taha Tesser on 17.08.2024.

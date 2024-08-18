@@ -1,5 +1,5 @@
 
-# Swift Playground
+# SwiftUI Playground
 
 > [!NOTE]
 > This is a collection of Swift/SwiftUI samples. It includes code snippets, examples, and exercises that I have collected from various sources and created myself.

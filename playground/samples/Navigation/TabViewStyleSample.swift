@@ -9,26 +9,26 @@ import SwiftUI
 
 struct TabViewStyleSample: View {
     var body: some View {
-      TabView{
-        Tab("Feed", systemImage: "rectangle.stack.fill") {
-          Text("Feed Page")
-            .font(.headline)
-        }
-        Tab("Search", systemImage: "magnifyingglass") {
-          Text("Search Page")
-            .font(.headline)
-        }
-        TabSection("Notifs & You") {
-          Tab("Notifications", systemImage: "bell.fill") {
-            Text("Notifications Page")
-              .font(.headline)
-          }
-          Tab("You", systemImage: "person.crop.circle") {
-            Text("You Page")
-              .font(.headline)
-          }
-        }
-      }.tabViewStyle(.sidebarAdaptable)
+        TabView {
+            Tab("Feed", systemImage: "rectangle.stack.fill") {
+                Text("Feed Page")
+                    .font(.headline)
+            }
+            Tab("Search", systemImage: "magnifyingglass") {
+                Text("Search Page")
+                    .font(.headline)
+            }
+            TabSection("Notifs & You") {
+                Tab("Notifications", systemImage: "bell.fill") {
+                    Text("Notifications Page")
+                        .font(.headline)
+                }
+                Tab("You", systemImage: "person.crop.circle") {
+                    Text("You Page")
+                        .font(.headline)
+                }
+            }
+        }.tabViewStyle(.sidebarAdaptable)
     }
 }
 

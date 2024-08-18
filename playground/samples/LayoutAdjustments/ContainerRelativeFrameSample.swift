@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContainerRelativeFrameSample: View {
-  var body: some View {
-    ZStack {
-      Color.purple
-        .containerRelativeFrame(.horizontal) { size, axis in
-          size / 2
+    var body: some View {
+        ZStack {
+            Color.purple
+                .containerRelativeFrame(.horizontal) { size, _ in
+                    size / 2
+                }
+            Text("1/2 of the horizontal width")
+                .font(.footnote)
+                .foregroundStyle(.white)
         }
-      Text("1/2 of the horizontal width")
-        .font(.footnote)
-        .foregroundStyle(.white)
     }
-  }
 }
 
 #Preview {
-  ContainerRelativeFrameSample()
+    ContainerRelativeFrameSample()
 }

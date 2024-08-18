@@ -9,11 +9,10 @@ import SwiftUI
 
 @main
 struct playgroundApp: App {
-
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .defaultSize(width: 400, height: 1000)
     }
 }
-

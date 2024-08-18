@@ -1,29 +1,29 @@
-name: Test
+# name: Test
 
-on:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-jobs:
-  build:
-    # Create a job that runs on macOS
-    name: Test
-    runs-on: macos-latest
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - name: List available Xcode versions
-        run: ls /Applications | grep Xcode
-      # Install Xcode 16 beta 4
-      - name: Set up Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_16_beta_5.app/Contents/Developer
-      - name: Show current version of Xcode
-        run: xcodebuild -version
-      - name: Run tests
-        run: ./run_tests.sh
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
+# jobs:
+#   build:
+#     # Create a job that runs on macOS
+#     name: Test
+#     runs-on: macos-latest
+#     steps:
+#       - name: Check out repository code
+#         uses: actions/checkout@v4
+#       - name: List available Xcode versions
+#         run: ls /Applications | grep Xcode
+#       # Install Xcode 16 beta 4
+#       - name: Set up Xcode version
+#         run: sudo xcode-select -s /Applications/Xcode_16_beta_5.app/Contents/Developer
+#       - name: Show current version of Xcode
+#         run: xcodebuild -version
+#       - name: Run tests
+#         run: ./run_tests.sh

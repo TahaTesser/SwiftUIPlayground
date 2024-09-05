@@ -32,7 +32,6 @@ struct TypographySample: View {
                 .font(.caption)
             Text("Hello, SwiftUI!")
                 .font(.caption2)
-
         }
         .padding()
     }

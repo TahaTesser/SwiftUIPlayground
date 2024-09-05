@@ -113,4 +113,11 @@ public let samples: [String: AnyView] = [
             "Slider": AnyView(SliderSample()),
         ]
     )),
+    "Charts": AnyView(SamplesList(
+        title: "Charts", samples:
+        [
+            // https://developer.apple.com/documentation/charts/linemark
+            "LineChart": AnyView(LineChartSample()),
+        ]
+    )),
 ]

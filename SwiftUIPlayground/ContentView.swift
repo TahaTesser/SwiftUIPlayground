@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  playground
+//  SwiftUIPlayground
 //
-//  Created by Taha Tesser on 04.08.2024.
+//  Created by Taha Tesser on 05.09.2024.
 //
 
 import SwiftUI

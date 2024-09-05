@@ -66,6 +66,8 @@ public let samples: [String: AnyView] = [
             "Text Renderer": AnyView(TextRendererSample()),
             // https://developer.apple.com/documentation/swiftui/text/datestyle
             "Relative DateStyle": AnyView(RelativeDateStyleSample()),
+            // https://developer.apple.com/documentation/swiftui/font
+            "Typography": AnyView(TypographySample()),
         ]
     )),
     "Navigation": AnyView(SamplesList(

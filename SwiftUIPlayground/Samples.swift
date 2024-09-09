@@ -120,4 +120,10 @@ public let samples: [String: AnyView] = [
             "LineChart": AnyView(LineChartSample()),
         ]
     )),
+    "SF Symbols": AnyView(SamplesList(
+        title: "SF Symbols", samples:
+        [
+            "Circle Character": AnyView(CircleInitialAvatarSample()),
+        ]
+    )),
 ]

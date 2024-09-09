@@ -1,5 +1,5 @@
 //
-//  CircleCharacterSample.swift
+//  CircleInitialAvatarSample.swift
 //  SwiftUIPlayground
 //
 //  Created by Taha Tesser on 9/9/24.
@@ -12,7 +12,7 @@ struct CircleInitialAvatarSample: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            if (text.isEmpty) {
+            if text.isEmpty {
                 Image(systemName: "exclamationmark.circle.fill")
                     .resizable()
                     .frame(width: 100, height: 100)
@@ -20,7 +20,6 @@ struct CircleInitialAvatarSample: View {
                 Image(systemName: "\(String(describing: text)).circle.fill")
                     .resizable()
                     .frame(width: 100, height: 100)
-
             }
             TextField(
                 "Enter a character",
@@ -38,7 +37,7 @@ struct CircleInitialAvatarSample: View {
                 if filtered != text {
                     text = filtered.isEmpty ? "" : String(filtered.prefix(1))
                 }
-                if !text.isEmpty && !("a"..."z").contains(text.lowercased()) {
+                if !text.isEmpty && !("a" ... "z").contains(text.lowercased()) {
                     text = ""
                 }
             }

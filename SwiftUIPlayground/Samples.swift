@@ -126,4 +126,10 @@ public let samples: [String: AnyView] = [
             "Circle Character": AnyView(CircleInitialAvatarSample()),
         ]
     )),
+    "Controls and Indicators": AnyView(SamplesList(
+        title: "Controls and Indicators", samples:
+        [
+            "Stepper": AnyView(StepperSample()),
+        ]
+    )),
 ]

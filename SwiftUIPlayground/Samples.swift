@@ -130,6 +130,7 @@ public let samples: [String: AnyView] = [
         title: "Controls and Indicators", samples:
         [
             "Stepper": AnyView(StepperSample()),
+            "ColorPicker": AnyView(ColorPickerSample()),
         ]
     )),
 ]

@@ -41,6 +41,8 @@ public let samples: [String: AnyView] = [
         [
             // https://developer.apple.com/documentation/swiftui/view/containerrelativeframe(_:alignment:)
             "Container Relative Frame": AnyView(ContainerRelativeFrameSample()),
+            // https://developer.apple.com/documentation/swiftui/view/safeareainset(edge:alignment:spacing:content:)-6gwby
+            "safeAreaInset": AnyView(SafeAreaInsetSample()),
         ]
     )),
     "Drawing and Graphics": AnyView(SamplesList(

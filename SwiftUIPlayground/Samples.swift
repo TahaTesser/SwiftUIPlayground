@@ -95,6 +95,8 @@ public let samples: [String: AnyView] = [
             "Form": AnyView(FormSample()),
             // https://developer.apple.com/documentation/swiftui/groupbox
             "GroupBox": AnyView(GroupBoxSample()),
+            // https://developer.apple.com/documentation/swiftui/view/scrollcontentbackground(_:)
+            "scrollContentBackground": AnyView(ScrollContentBackgroundSample()),
         ]
     )),
     "Lists": AnyView(SamplesList(

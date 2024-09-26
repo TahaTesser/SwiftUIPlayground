@@ -125,7 +125,7 @@ public let samples: [String: AnyView] = [
     "SF Symbols": AnyView(SamplesList(
         title: "SF Symbols", samples:
         [
-            "Circle Character": AnyView(CircleInitialAvatarSample()),
+            "Circle Avatar": AnyView(CircleAvatarSample()),
         ]
     )),
     "Controls and Indicators": AnyView(SamplesList(

@@ -1,5 +1,5 @@
 //
-//  CircleInitialAvatarSample.swift
+//  CircleAvatarSample.swift
 //  SwiftUIPlayground
 //
 //  Created by Taha Tesser on 9/9/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircleInitialAvatarSample: View {
+struct CircleAvatarSample: View {
     @State private var text: String = "a"
 
     var body: some View {
@@ -52,5 +52,5 @@ struct CircleInitialAvatarSample: View {
 }
 
 #Preview {
-    CircleInitialAvatarSample()
+    CircleAvatarSample()
 }

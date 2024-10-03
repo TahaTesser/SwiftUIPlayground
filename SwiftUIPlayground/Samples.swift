@@ -135,6 +135,7 @@ public let samples: [String: AnyView] = [
         [
             "Stepper": AnyView(StepperSample()),
             "ColorPicker": AnyView(ColorPickerSample()),
+            "ProgressView": AnyView(ProgressViewSample()),
         ]
     )),
 ]

@@ -138,4 +138,12 @@ public let samples: [String: AnyView] = [
             "ProgressView": AnyView(ProgressViewSample()),
         ]
     )),
+    "Layout Fundamentals": AnyView(SamplesList(
+        title: "Layout Fundamentals", samples:
+        [
+            // https://developer.apple.com/documentation/swiftui/viewthatfits
+            "ViewThatFits": AnyView(ViewThatFitsSample()),
+        ]
+    )),
+
 ]

@@ -145,5 +145,11 @@ public let samples: [String: AnyView] = [
             "ViewThatFits": AnyView(ViewThatFitsSample()),
         ]
     )),
-
+    "Animations": AnyView(SamplesList(
+        title: "Animations", samples:
+        [
+            // https://developer.apple.com/documentation/swiftui/view/matchedgeometryeffect(id:in:properties:anchor:issource:)
+            "matchedgeometryeffect": AnyView(MatchedGeometryEffectSample()),
+        ]
+    )),
 ]

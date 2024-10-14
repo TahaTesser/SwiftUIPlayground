@@ -152,4 +152,18 @@ public let samples: [String: AnyView] = [
             "matchedgeometryeffect": AnyView(MatchedGeometryEffectSample()),
         ]
     )),
+    "Custom Layout": AnyView(SamplesList(
+        title: "Custom Layout", samples:
+        [
+            // https://developer.apple.com/documentation/swiftui/layout
+            "Layout Protocol": AnyView(LayoutProtocolSample()),
+        ]
+    )),
+    "View Fundamentals": AnyView(SamplesList(
+        title: "View Fundamental", samples:
+        [
+            // https://developer.apple.com/documentation/swiftui/viewmodifier
+            "ViewModifier Protocol": AnyView(ViewModifierProtocolSample()),
+        ]
+    )),
 ]

@@ -28,46 +28,44 @@ struct LayoutProtocolSample: View {
 }
 
 struct BackslashStack: Layout {
-    
-    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-        
+    func sizeThatFits(proposal _: ProposedViewSize, subviews: Subviews, cache _: inout ()) -> CGSize {
         let subviewSizes = subviews.map { proxy in
-            return proxy.sizeThatFits(.unspecified)
+            proxy.sizeThatFits(.unspecified)
         }
-        
+
         let combinedSize = subviewSizes.reduce(.zero) { currentSize, subviewSize in
-            
-            return CGSize(
-                width: currentSize.width + subviewSize.width, height: currentSize.height + subviewSize.height)
+
+            CGSize(
+                width: currentSize.width + subviewSize.width, height: currentSize.height + subviewSize.height
+            )
         }
-        
+
         return combinedSize
     }
-    
-    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
-        
-        
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache _: inout ()) {
         let subviewSizes = subviews.map { proxy in
-            return proxy.sizeThatFits(.unspecified)
+            proxy.sizeThatFits(.unspecified)
         }
-        
+
         var x = bounds.minX
         var y = bounds.minY
-        
+
         for index in subviews.indices {
             let subviewSize = subviewSizes[index]
             let sizeProposal = ProposedViewSize(
                 width: subviewSize.width,
-                height: subviewSize.height)
-            
+                height: subviewSize.height
+            )
+
             subviews[index]
                 .place(
                     at: CGPoint(x: x, y: y),
-                    proposal: sizeProposal)
-            
+                    proposal: sizeProposal
+                )
+
             x += subviewSize.width
             y += subviewSize.height
         }
     }
-    
 }

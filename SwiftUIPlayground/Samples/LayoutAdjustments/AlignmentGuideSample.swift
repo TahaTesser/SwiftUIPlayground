@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AlignmentGuideSample: View {
-    
     var body: some View {
         VStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 20)
@@ -33,9 +32,7 @@ struct AlignmentGuideSample: View {
                 .fill(Color.green)
                 .frame(width: 50, height: 50)
         }
-
     }
-
 }
 
 #Preview {

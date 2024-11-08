@@ -168,4 +168,10 @@ public let samples: [String: AnyView] = [
             "ViewModifier Protocol": AnyView(ViewModifierProtocolSample()),
         ]
     )),
+    "Shapes": AnyView(SamplesList(
+        title: "Shapes", samples:
+        [
+            "Progress Indicator Arc": AnyView(ProgressIndicatorArcSample()),
+        ]
+    )),
 ]

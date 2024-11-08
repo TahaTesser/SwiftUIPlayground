@@ -38,6 +38,5 @@ struct UploadProgressView: View {
                 .frame(width: 100)
             Text("\(uploadProgress.formatted(.percent))")
         }
-
     }
 }

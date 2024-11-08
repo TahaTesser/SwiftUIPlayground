@@ -10,7 +10,7 @@ import SwiftUI
 struct MatchedGeometryEffectSample: View {
     @Namespace private var animation
     @State private var isExpanded: Bool = false
-    
+
     var body: some View {
         ZStack {
             if isExpanded {
@@ -24,7 +24,6 @@ struct MatchedGeometryEffectSample: View {
                         .scaledToFit()
                         .padding()
                         .matchedGeometryEffect(id: "park", in: animation)
-
                 }
             } else {
                 ZStack {
@@ -47,7 +46,8 @@ struct MatchedGeometryEffectSample: View {
                 isExpanded.toggle()
             }
         }
-        .ignoresSafeArea()    }
+        .ignoresSafeArea()
+    }
 }
 
 #Preview {

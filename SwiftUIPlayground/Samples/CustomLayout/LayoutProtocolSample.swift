@@ -43,7 +43,7 @@ struct BackslashStack: Layout {
         return combinedSize
     }
 
-    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache _: inout ()) {
+    func placeSubviews(in bounds: CGRect, proposal _: ProposedViewSize, subviews: Subviews, cache _: inout ()) {
         let subviewSizes = subviews.map { proxy in
             proxy.sizeThatFits(.unspecified)
         }

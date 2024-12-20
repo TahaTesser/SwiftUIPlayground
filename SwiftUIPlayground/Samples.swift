@@ -174,4 +174,10 @@ public let samples: [String: AnyView] = [
             "Progress Indicator Arc": AnyView(ProgressIndicatorArcSample()),
         ]
     )),
+    "View": AnyView(SamplesList(
+        title: "View", samples:
+        [
+            "Color Brightess": AnyView(ColorBrightnessSample()),
+        ]
+    )),
 ]

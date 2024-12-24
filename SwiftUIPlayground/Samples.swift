@@ -181,4 +181,10 @@ public let samples: [String: AnyView] = [
             "Color Brightess": AnyView(ColorBrightnessSample()),
         ]
     )),
+    "NumbersDataBasicValues": AnyView(SamplesList(
+        title: "NumbersDataBasicValues", samples:
+        [
+            "NumberFormatter": AnyView(NumberFormatterSample()),
+        ]
+    ))
 ]

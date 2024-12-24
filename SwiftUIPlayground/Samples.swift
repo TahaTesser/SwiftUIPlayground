@@ -172,6 +172,7 @@ public let samples: [String: AnyView] = [
         title: "Shapes", samples:
         [
             "Progress Indicator Arc": AnyView(ProgressIndicatorArcSample()),
+            "Stroke Border": AnyView(StrokeBorderSample()),
         ]
     )),
     "View": AnyView(SamplesList(

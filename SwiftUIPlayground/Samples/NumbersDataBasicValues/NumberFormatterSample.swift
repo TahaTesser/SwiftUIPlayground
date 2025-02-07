@@ -13,7 +13,7 @@ struct NumberFormatterSample: View {
             .font(.system(size: 80, weight: .bold))
             .padding()
     }
-    
+
     private func formatNumberAsWords(_ number: Int) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .spellOut

@@ -72,6 +72,8 @@ public let samples: [String: AnyView] = [
             "Relative DateStyle": AnyView(RelativeDateStyleSample()),
             // https://developer.apple.com/documentation/swiftui/font
             "Typography": AnyView(TypographySample()),
+            // https://developer.apple.com/documentation/swiftui/view/foregroundstyle(_:)
+            "ForegroundStyle": AnyView(ForegroundStyleSample()),
         ]
     )),
     "Navigation": AnyView(SamplesList(

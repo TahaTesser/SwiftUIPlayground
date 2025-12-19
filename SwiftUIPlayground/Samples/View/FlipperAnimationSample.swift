@@ -23,7 +23,6 @@ struct FlipperAnimationSample: View {
         }
         .onAppear {
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-
                 withAnimation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.2)) {
                     flipped.toggle()
                 }

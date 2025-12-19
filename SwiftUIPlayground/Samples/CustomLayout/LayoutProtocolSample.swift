@@ -34,7 +34,6 @@ struct BackslashStack: Layout {
         }
 
         let combinedSize = subviewSizes.reduce(.zero) { currentSize, subviewSize in
-
             CGSize(
                 width: currentSize.width + subviewSize.width, height: currentSize.height + subviewSize.height
             )

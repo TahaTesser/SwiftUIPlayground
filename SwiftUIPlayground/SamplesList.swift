@@ -9,9 +9,9 @@ import SwiftUI
 
 struct SamplesList: View {
     let title: String
-    let samples: [String: AnyView]
+    let samples: [SampleItem]
 
-    init(title: String, samples: [String: AnyView]) {
+    init(title: String, samples: [SampleItem]) {
         self.title = title
         self.samples = samples
     }
@@ -21,16 +21,19 @@ struct SamplesList: View {
         GridItem(.flexible(), spacing: 16),
     ]
 
+    private var sortedSamples: [SampleItem] {
+        samples.sorted { left, right in
+            left.title.localizedStandardCompare(right.title) == .orderedAscending
+        }
+    }
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
-                ForEach(
-                    Array(samples.keys.sorted()),
-                    id: \.self
-                ) { sampleKey in
-                    NavigationLink(destination: samples[sampleKey]) {
+                ForEach(sortedSamples) { sample in
+                    NavigationLink(destination: sample.destination) {
                         VStack {
-                            Text(sampleKey)
+                            Text(sample.title)
                                 .font(.headline)
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.primary)
@@ -58,10 +61,10 @@ struct SamplesList: View {
 #Preview {
     NavigationView {
         SamplesList(title: "Swift Playground", samples: [
-            "Sample 1": AnyView(Text("This is Sample 1")),
-            "Sample 2": AnyView(Text("This is Sample 2")),
-            "Sample 3": AnyView(Text("This is Sample 3")),
-            "Sample 4": AnyView(Text("This is Sample 4")),
+            SampleItem("Sample 1") { Text("This is Sample 1") },
+            SampleItem("Sample 2") { Text("This is Sample 2") },
+            SampleItem("Sample 3") { Text("This is Sample 3") },
+            SampleItem("Sample 4") { Text("This is Sample 4") },
         ])
     }
 }

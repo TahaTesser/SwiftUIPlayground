@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
     NavigationStack {
-      SamplesList(title: "Swift Playground", samples: SampleCatalog.rootItems)
+      SamplesList(title: "SwiftUI Playground", samples: SampleCatalog.rootItems)
     }
   }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct SamplesList: View {
   let title: String
   let samples: [SampleItem]
+  @State private var searchText = ""
 
   init(title: String, samples: [SampleItem]) {
     self.title = title
@@ -27,27 +28,37 @@ struct SamplesList: View {
     }
   }
 
+  private var filteredSamples: [SampleItem] {
+    guard !searchText.isEmpty else {
+      return sortedSamples
+    }
+
+    return sortedSamples.filter { sample in
+      sample.title.localizedCaseInsensitiveContains(searchText)
+    }
+  }
+
   var body: some View {
     ScrollView {
       LazyVGrid(columns: columns, spacing: 16) {
-        ForEach(sortedSamples) { sample in
+        ForEach(filteredSamples) { sample in
           NavigationLink(destination: sample.destination) {
             VStack {
               Text(sample.title)
                 .font(.headline)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.primary)
-                .padding(.horizontal)
-                .padding(.vertical, 10)
-                .frame(height: 100)
-                .frame(maxWidth: .infinity)
-                .background(Color.blue.opacity(0.1))
-                .cornerRadius(10)
-                .overlay(
-                  RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.blue, lineWidth: 1)
-                )
             }
+            .padding(.horizontal)
+            .padding(.vertical, 10)
+            .frame(minHeight: 100)
+            .frame(maxWidth: .infinity)
+            .background(Color.blue.opacity(0.1))
+            .cornerRadius(10)
+            .overlay(
+              RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.blue, lineWidth: 1)
+            )
           }
           .buttonStyle(PlainButtonStyle())
         }
@@ -55,6 +66,7 @@ struct SamplesList: View {
       .padding()
     }
     .navigationTitle(title)
+    .searchable(text: $searchText, prompt: "Search samples")
   }
 }
 

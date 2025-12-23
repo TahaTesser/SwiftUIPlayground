@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        NavigationStack {
-            SamplesList(title: "Swift Playground", samples: SampleCatalog.rootItems)
-        }
+  var body: some View {
+    NavigationStack {
+      SamplesList(title: "Swift Playground", samples: SampleCatalog.rootItems)
     }
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
 
 struct Marvel: Identifiable {
-    var type: String
-    var count: Double
-    var id = UUID()
+  var type: String
+  var count: Double
+  var id = UUID()
 }

@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct NumberFormatterSample: View {
-    var body: some View {
-        Text(formatNumberAsWords(1234))
-            .font(.system(size: 80, weight: .bold))
-            .padding()
-    }
+  var body: some View {
+    Text(formatNumberAsWords(1234))
+      .font(.system(size: 80, weight: .bold))
+      .padding()
+  }
 
-    private func formatNumberAsWords(_ number: Int) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .spellOut
-        return numberFormatter.string(from: NSNumber(value: number)) ?? "N/A"
-    }
+  private func formatNumberAsWords(_ number: Int) -> String {
+    let numberFormatter = NumberFormatter()
+    numberFormatter.numberStyle = .spellOut
+    return numberFormatter.string(from: NSNumber(value: number)) ?? "N/A"
+  }
 }
 
 #Preview {
-    NumberFormatterSample()
-        .preferredColorScheme(.dark)
+  NumberFormatterSample()
+    .preferredColorScheme(.dark)
 }

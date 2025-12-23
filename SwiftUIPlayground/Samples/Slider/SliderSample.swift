@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct SliderSample: View {
-    @State var sliderValue = 50.0
-    @State var isEditing = false
+  @State var sliderValue = 50.0
+  @State var isEditing = false
 
-    var body: some View {
-        VStack {
-            Slider(
-                value: $sliderValue,
-                in: 0 ... 100,
-                onEditingChanged: { editing in
-                    isEditing = editing
-                }
-            )
-            Text("\(sliderValue)")
-                .foregroundStyle(isEditing ? .red : .blue)
-        }.padding()
-    }
+  var body: some View {
+    VStack {
+      Slider(
+        value: $sliderValue,
+        in: 0...100,
+        onEditingChanged: { editing in
+          isEditing = editing
+        }
+      )
+      Text("\(sliderValue)")
+        .foregroundStyle(isEditing ? .red : .blue)
+    }.padding()
+  }
 }
 
 #Preview {
-    SliderSample()
+  SliderSample()
 }

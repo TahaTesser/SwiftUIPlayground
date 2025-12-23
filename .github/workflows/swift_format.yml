@@ -1,4 +1,4 @@
-name: SwiftFormat
+name: Swift Format
 
 on:
   push:
@@ -12,16 +12,19 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install SwiftFormat
-      run: brew install swiftformat
-
-    - name: Run SwiftFormat
+    - name: Run Swift Format
       run: |
-        swiftformat .
+        FILES=$(git ls-files "*.swift")
+        if [ -z "$FILES" ]; then
+          echo "No Swift files to format."
+          exit 0
+        fi
+
+        swift format --in-place --parallel $FILES
         if [[ `git status --porcelain` ]]; then
-          echo "SwiftFormat made changes. Failing the workflow."
+          echo "Swift format made changes. Failing the workflow."
           git diff
           exit 1
         else
-          echo "SwiftFormat check passed."
+          echo "Swift format check passed."
         fi

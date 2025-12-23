@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ScrollContentBackgroundSample: View {
-    var body: some View {
-        List {
-            Text("One")
-            Text("Two")
-            Text("Three")
-        }
-        .background(Image(.sequoia))
-        .scrollContentBackground(.hidden)
+  var body: some View {
+    List {
+      Text("One")
+      Text("Two")
+      Text("Three")
     }
+    .background(Image(.sequoia))
+    .scrollContentBackground(.hidden)
+  }
 }
 
 #Preview {
-    ScrollContentBackgroundSample()
+  ScrollContentBackgroundSample()
 }

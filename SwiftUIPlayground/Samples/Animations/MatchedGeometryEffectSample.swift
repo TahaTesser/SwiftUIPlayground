@@ -8,48 +8,48 @@
 import SwiftUI
 
 struct MatchedGeometryEffectSample: View {
-    @Namespace private var animation
-    @State private var isExpanded: Bool = false
+  @Namespace private var animation
+  @State private var isExpanded: Bool = false
 
-    var body: some View {
+  var body: some View {
+    ZStack {
+      if isExpanded {
         ZStack {
-            if isExpanded {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(.black)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                    Image(systemName: "rainbow")
-                        .symbolRenderingMode(.multicolor)
-                        .resizable()
-                        .scaledToFit()
-                        .padding()
-                        .matchedGeometryEffect(id: "park", in: animation)
-                }
-            } else {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(.black)
-                        .frame(height: 100)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                    Image(systemName: "rainbow")
-                        .symbolRenderingMode(.multicolor)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 80)
-                        .matchedGeometryEffect(id: "park", in: animation)
-                }
-                .padding()
-            }
+          RoundedRectangle(cornerRadius: 10)
+            .fill(.black)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+          Image(systemName: "rainbow")
+            .symbolRenderingMode(.multicolor)
+            .resizable()
+            .scaledToFit()
+            .padding()
+            .matchedGeometryEffect(id: "park", in: animation)
         }
-        .onTapGesture {
-            withAnimation(.spring()) {
-                isExpanded.toggle()
-            }
+      } else {
+        ZStack {
+          RoundedRectangle(cornerRadius: 10)
+            .fill(.black)
+            .frame(height: 100)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+          Image(systemName: "rainbow")
+            .symbolRenderingMode(.multicolor)
+            .resizable()
+            .scaledToFit()
+            .frame(height: 80)
+            .matchedGeometryEffect(id: "park", in: animation)
         }
-        .ignoresSafeArea()
+        .padding()
+      }
     }
+    .onTapGesture {
+      withAnimation(.spring()) {
+        isExpanded.toggle()
+      }
+    }
+    .ignoresSafeArea()
+  }
 }
 
 #Preview {
-    MatchedGeometryEffectSample()
+  MatchedGeometryEffectSample()
 }

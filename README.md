@@ -13,7 +13,7 @@
 
 ### Preview
 
-<img src="./Docs/Screenshot-1.png" height="800" />
+<img src="./Docs/Screenshot-Preview.png" height="800" />
 
 ### Credits and References
 - [Enid](https://x.com/ios_dev_alb)

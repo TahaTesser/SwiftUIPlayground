@@ -146,6 +146,9 @@ public enum SampleCatalog {
         SampleSection(title: "NumbersDataBasicValues", samples: [
             SampleItem("NumberFormatter") { NumberFormatterSample() },
         ]),
+        SampleSection(title: "Contacts", samples: [
+            SampleItem("CNContactStore") { CNContactStoreSample() },
+        ]),
     ]
 
     public static var rootItems: [SampleItem] {

@@ -207,6 +207,11 @@ public enum SampleCatalog {
       samples: [
         SampleItem(".sheet") { SheetSample() }
       ]),
+    SampleSection(
+      title: "LiquidGlass",
+      samples: [
+        SampleItem("GlassEffectContainer") { GlassEffectContainerSample() }
+      ]),
   ]
 
   public static var rootItems: [SampleItem] {

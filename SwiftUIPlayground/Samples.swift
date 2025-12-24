@@ -202,6 +202,11 @@ public enum SampleCatalog {
       samples: [
         SampleItem("AnimatingBorder") { AnimatingBorderSample() }
       ]),
+    SampleSection(
+      title: "View",
+      samples: [
+        SampleItem(".sheet") { SheetSample() }
+      ]),
   ]
 
   public static var rootItems: [SampleItem] {

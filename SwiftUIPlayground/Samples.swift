@@ -107,7 +107,7 @@ public enum SampleCatalog {
         // https://developer.apple.com/documentation/swiftui/asyncimage
         SampleItem("Async Image") { AsyncImageSample() },
         // https://developer.apple.com/documentation/swiftui/image/init(_:variablevalue:bundle:)
-        SampleItem("Variable Value") { VariableValueSample() },
+        SampleItem("Images") { VariableValueSample() },
       ]),
     SampleSection(
       title: "View Groupings",
@@ -140,7 +140,7 @@ public enum SampleCatalog {
         SampleItem("LineChart") { LineChartSample() }
       ]),
     SampleSection(
-      title: "SF Symbols",
+      title: "Images",
       samples: [
         SampleItem("Circle Avatar") { CircleAvatarSample() }
       ]),
@@ -211,6 +211,11 @@ public enum SampleCatalog {
       title: "LiquidGlass",
       samples: [
         SampleItem("GlassEffectContainer") { GlassEffectContainerSample() }
+      ]),
+    SampleSection(
+      title: "Images",
+      samples: [
+        SampleItem("SymbolImage Shadow") { SymbolImageShadowSample() }
       ]),
   ]
 

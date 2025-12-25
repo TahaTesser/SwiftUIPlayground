@@ -8,24 +8,24 @@
 import SwiftUI
 
 public struct SampleItem: Identifiable {
+  public let id: String
   public let title: String
   public let destination: AnyView
 
-  public var id: String { title }
-
-  public init<V: View>(_ title: String, @ViewBuilder destination: () -> V) {
+  public init<V: View>(_ title: String, id: String? = nil, @ViewBuilder destination: () -> V) {
+    self.id = id ?? title
     self.title = title
     self.destination = AnyView(destination())
   }
 }
 
 public struct SampleSection: Identifiable {
+  public let id: String
   public let title: String
   public let samples: [SampleItem]
 
-  public var id: String { title }
-
-  public init(title: String, samples: [SampleItem]) {
+  public init(id: String? = nil, title: String, samples: [SampleItem]) {
+    self.id = id ?? title
     self.title = title
     self.samples = samples
   }
@@ -102,6 +102,7 @@ public enum SampleCatalog {
         SampleItem("Tab View Style") { TabViewStyleSample() },
       ]),
     SampleSection(
+      id: "Images-AsyncImage",
       title: "Images",
       samples: [
         // https://developer.apple.com/documentation/swiftui/asyncimage
@@ -140,6 +141,7 @@ public enum SampleCatalog {
         SampleItem("LineChart") { LineChartSample() }
       ]),
     SampleSection(
+      id: "Images-CircleAvatar",
       title: "Images",
       samples: [
         SampleItem("Circle Avatar") { CircleAvatarSample() }
@@ -176,12 +178,14 @@ public enum SampleCatalog {
         SampleItem("ViewModifier Protocol") { ViewModifierProtocolSample() }
       ]),
     SampleSection(
+      id: "Shapes-ProgressStroke",
       title: "Shapes",
       samples: [
         SampleItem("Progress Indicator Arc") { ProgressIndicatorArcSample() },
         SampleItem("Stroke Border") { StrokeBorderSample() },
       ]),
     SampleSection(
+      id: "View-ColorFlipper",
       title: "View",
       samples: [
         SampleItem("Color Brightess") { ColorBrightnessSample() },
@@ -198,11 +202,13 @@ public enum SampleCatalog {
         SampleItem("CNContactStore") { CNContactStoreSample() }
       ]),
     SampleSection(
+      id: "Shapes-AnimatingBorder",
       title: "Shapes",
       samples: [
         SampleItem("AnimatingBorder") { AnimatingBorderSample() }
       ]),
     SampleSection(
+      id: "View-Sheet",
       title: "View",
       samples: [
         SampleItem(".sheet") { SheetSample() }
@@ -213,6 +219,7 @@ public enum SampleCatalog {
         SampleItem("GlassEffectContainer") { GlassEffectContainerSample() }
       ]),
     SampleSection(
+      id: "Images-SymbolShadow",
       title: "Images",
       samples: [
         SampleItem("SymbolImage Shadow") { SymbolImageShadowSample() }
@@ -221,7 +228,7 @@ public enum SampleCatalog {
 
   public static var rootItems: [SampleItem] {
     sections.map { section in
-      SampleItem(section.title) {
+      SampleItem(section.title, id: section.id) {
         SamplesList(title: section.title, samples: section.samples)
       }
     }

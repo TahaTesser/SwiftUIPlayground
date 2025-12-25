@@ -34,195 +34,262 @@ public struct SampleSection: Identifiable {
 public enum SampleCatalog {
   public static let sections: [SampleSection] = [
     SampleSection(
+      id: "buttons",
       title: "Buttons",
       samples: [
         // https://developer.apple.com/documentation/swiftui/button
-        SampleItem("Button Border Shape") { ButtonBorderShapeSample() }
+        SampleItem("Button Border Shape", id: "buttons-button-border-shape") {
+          ButtonBorderShapeSample()
+        }
       ]),
     SampleSection(
+      id: "map",
       title: "Map",
       samples: [
         // https://developer.apple.com/documentation/mapkit/map
-        SampleItem("MapStyle") { MapStyleSample() }
+        SampleItem("MapStyle", id: "map-map-style") { MapStyleSample() }
       ]),
     SampleSection(
+      id: "gesture",
       title: "Gesture",
       samples: [
         // https://developer.apple.com/documentation/swiftui/rotategesture
-        SampleItem("Rotate Gesture") { RotateGestureSample() }
+        SampleItem("Rotate Gesture", id: "gesture-rotate-gesture") { RotateGestureSample() }
       ]),
     SampleSection(
+      id: "third-party",
       title: "Third party",
       samples: [
         // https://github.com/christianselig/JunoSlider
-        SampleItem("JunoUI Slider") { JunoUISliderSample() }
+        SampleItem("JunoUI Slider", id: "third-party-juno-ui-slider") { JunoUISliderSample() }
       ]),
     SampleSection(
+      id: "layout-adjustments",
       title: "Layout Adjustments",
       samples: [
         // https://developer.apple.com/documentation/swiftui/view/containerrelativeframe(_:alignment:)
-        SampleItem("Container Relative Frame") { ContainerRelativeFrameSample() },
+        SampleItem("Container Relative Frame", id: "layout-adjustments-container-relative-frame") {
+          ContainerRelativeFrameSample()
+        },
         // https://developer.apple.com/documentation/swiftui/view/safeareainset(edge:alignment:spacing:content:)-6gwby
-        SampleItem("safeAreaInset") { SafeAreaInsetSample() },
+        SampleItem("safeAreaInset", id: "layout-adjustments-safe-area-inset") {
+          SafeAreaInsetSample()
+        },
         // https://developer.apple.com/documentation/swiftui/view/alignmentguide(_:computevalue:)-6y3u2
-        SampleItem("alignmentGuide") { AlignmentGuideSample() },
+        SampleItem("alignmentGuide", id: "layout-adjustments-alignment-guide") {
+          AlignmentGuideSample()
+        },
       ]),
     SampleSection(
+      id: "drawing-and-graphics",
       title: "Drawing and Graphics",
       samples: [
         // https://developer.apple.com/documentation/swiftui/view/compositinggroup()
-        SampleItem("Compsiting Group") { CompsitingGroupSample() },
+        SampleItem("Compsiting Group", id: "drawing-and-graphics-compsiting-group") {
+          CompsitingGroupSample()
+        },
         // https://developer.apple.com/documentation/swiftui/view/mask(alignment:_:)
-        SampleItem("Masking") { MaskingSample() },
+        SampleItem("Masking", id: "drawing-and-graphics-masking") { MaskingSample() },
       ]),
     SampleSection(
+      id: "tables",
       title: "Tables",
       samples: [
         // https://developer.apple.com/documentation/swiftui/table
-        SampleItem("Table") { TableSample() }
+        SampleItem("Table", id: "tables-table") { TableSample() }
       ]),
     SampleSection(
+      id: "text",
       title: "Text",
       samples: [
         // https://developer.apple.com/documentation/swiftui/textrenderer
-        SampleItem("Text Renderer") { TextRendererSample() },
+        SampleItem("Text Renderer", id: "text-text-renderer") { TextRendererSample() },
         // https://developer.apple.com/documentation/swiftui/text/datestyle
-        SampleItem("Relative DateStyle") { RelativeDateStyleSample() },
+        SampleItem("Relative DateStyle", id: "text-relative-date-style") {
+          RelativeDateStyleSample()
+        },
         // https://developer.apple.com/documentation/swiftui/font
-        SampleItem("Typography") { TypographySample() },
+        SampleItem("Typography", id: "text-typography") { TypographySample() },
         // https://developer.apple.com/documentation/swiftui/view/foregroundstyle(_:)
-        SampleItem("ForegroundStyle") { ForegroundStyleSample() },
+        SampleItem("ForegroundStyle", id: "text-foreground-style") { ForegroundStyleSample() },
       ]),
     SampleSection(
+      id: "navigation",
       title: "Navigation",
       samples: [
         // https://developer.apple.com/documentation/swiftui/tabview
-        SampleItem("Tab View") { TabViewSample() },
+        SampleItem("Tab View", id: "navigation-tab-view") { TabViewSample() },
         // https://developer.apple.com/documentation/swiftui/tabviewstyle
-        SampleItem("Tab View Style") { TabViewStyleSample() },
+        SampleItem("Tab View Style", id: "navigation-tab-view-style") { TabViewStyleSample() },
       ]),
     SampleSection(
-      id: "Images-AsyncImage",
+      id: "images-async-variable",
       title: "Images",
       samples: [
         // https://developer.apple.com/documentation/swiftui/asyncimage
-        SampleItem("Async Image") { AsyncImageSample() },
+        SampleItem("Async Image", id: "images-async-variable-async-image") { AsyncImageSample() },
         // https://developer.apple.com/documentation/swiftui/image/init(_:variablevalue:bundle:)
-        SampleItem("Images") { VariableValueSample() },
+        SampleItem("Images", id: "images-async-variable-variable-value-image") {
+          VariableValueSample()
+        },
       ]),
     SampleSection(
+      id: "view-groupings",
       title: "View Groupings",
       samples: [
         // https://developer.apple.com/documentation/swiftui/form
-        SampleItem("Form") { FormSample() },
+        SampleItem("Form", id: "view-groupings-form") { FormSample() },
         // https://developer.apple.com/documentation/swiftui/groupbox
-        SampleItem("GroupBox") { GroupBoxSample() },
+        SampleItem("GroupBox", id: "view-groupings-group-box") { GroupBoxSample() },
         // https://developer.apple.com/documentation/swiftui/view/scrollcontentbackground(_:)
-        SampleItem("scrollContentBackground") { ScrollContentBackgroundSample() },
+        SampleItem("scrollContentBackground", id: "view-groupings-scroll-content-background") {
+          ScrollContentBackgroundSample()
+        },
       ]),
     SampleSection(
+      id: "lists",
       title: "Lists",
       samples: [
         // https://developer.apple.com/documentation/swiftui/disclosuregroup
-        SampleItem("Disclosure Group") { DisclosureGroupSample() },
+        SampleItem("Disclosure Group", id: "lists-disclosure-group") { DisclosureGroupSample() },
         // https://developer.apple.com/documentation/swiftui/listsectionspacing
-        SampleItem("List Section Spacing") { ListSectionSpacingSample() },
+        SampleItem("List Section Spacing", id: "lists-list-section-spacing") {
+          ListSectionSpacingSample()
+        },
       ]),
     SampleSection(
+      id: "slider",
       title: "Slider",
       samples: [
         // https://developer.apple.com/documentation/swiftui/slider
-        SampleItem("Slider") { SliderSample() }
+        SampleItem("Slider", id: "slider-slider") { SliderSample() }
       ]),
     SampleSection(
+      id: "charts",
       title: "Charts",
       samples: [
         // https://developer.apple.com/documentation/charts/linemark
-        SampleItem("LineChart") { LineChartSample() }
+        SampleItem("LineChart", id: "charts-line-chart") { LineChartSample() }
       ]),
     SampleSection(
-      id: "Images-CircleAvatar",
+      id: "images-avatar",
       title: "Images",
       samples: [
-        SampleItem("Circle Avatar") { CircleAvatarSample() }
+        SampleItem("Circle Avatar", id: "images-avatar-circle-avatar") { CircleAvatarSample() }
       ]),
     SampleSection(
+      id: "controls-and-indicators",
       title: "Controls and Indicators",
       samples: [
-        SampleItem("Stepper") { StepperSample() },
-        SampleItem("ColorPicker") { ColorPickerSample() },
-        SampleItem("ProgressView") { ProgressViewSample() },
+        SampleItem("Stepper", id: "controls-and-indicators-stepper") { StepperSample() },
+        SampleItem("ColorPicker", id: "controls-and-indicators-color-picker") {
+          ColorPickerSample()
+        },
+        SampleItem("ProgressView", id: "controls-and-indicators-progress-view") {
+          ProgressViewSample()
+        },
       ]),
     SampleSection(
+      id: "layout-fundamentals",
       title: "Layout Fundamentals",
       samples: [
         // https://developer.apple.com/documentation/swiftui/viewthatfits
-        SampleItem("ViewThatFits") { ViewThatFitsSample() }
+        SampleItem("ViewThatFits", id: "layout-fundamentals-view-that-fits") {
+          ViewThatFitsSample()
+        }
       ]),
     SampleSection(
+      id: "animations",
       title: "Animations",
       samples: [
         // https://developer.apple.com/documentation/swiftui/view/matchedgeometryeffect(id:in:properties:anchor:issource:)
-        SampleItem("matchedgeometryeffect") { MatchedGeometryEffectSample() }
+        SampleItem("matchedgeometryeffect", id: "animations-matched-geometry-effect") {
+          MatchedGeometryEffectSample()
+        }
       ]),
     SampleSection(
+      id: "custom-layout",
       title: "Custom Layout",
       samples: [
         // https://developer.apple.com/documentation/swiftui/layout
-        SampleItem("Layout Protocol") { LayoutProtocolSample() }
+        SampleItem("Layout Protocol", id: "custom-layout-layout-protocol") {
+          LayoutProtocolSample()
+        }
       ]),
     SampleSection(
+      id: "view-fundamentals",
       title: "View Fundamentals",
       samples: [
         // https://developer.apple.com/documentation/swiftui/viewmodifier
-        SampleItem("ViewModifier Protocol") { ViewModifierProtocolSample() }
+        SampleItem("ViewModifier Protocol", id: "view-fundamentals-view-modifier-protocol") {
+          ViewModifierProtocolSample()
+        }
       ]),
     SampleSection(
-      id: "Shapes-ProgressStroke",
+      id: "shapes-progress-stroke",
       title: "Shapes",
       samples: [
-        SampleItem("Progress Indicator Arc") { ProgressIndicatorArcSample() },
-        SampleItem("Stroke Border") { StrokeBorderSample() },
+        SampleItem("Progress Indicator Arc", id: "shapes-progress-stroke-progress-indicator-arc") {
+          ProgressIndicatorArcSample()
+        },
+        SampleItem("Stroke Border", id: "shapes-progress-stroke-stroke-border") {
+          StrokeBorderSample()
+        },
       ]),
     SampleSection(
-      id: "View-ColorFlipper",
+      id: "view-color-flipper",
       title: "View",
       samples: [
-        SampleItem("Color Brightess") { ColorBrightnessSample() },
-        SampleItem("Flipper Animation") { FlipperAnimationSample() },
+        SampleItem("Color Brightess", id: "view-color-flipper-color-brightness") {
+          ColorBrightnessSample()
+        },
+        SampleItem("Flipper Animation", id: "view-color-flipper-flipper-animation") {
+          FlipperAnimationSample()
+        },
       ]),
     SampleSection(
+      id: "numbers-data-basic-values",
       title: "NumbersDataBasicValues",
       samples: [
-        SampleItem("NumberFormatter") { NumberFormatterSample() }
+        SampleItem("NumberFormatter", id: "numbers-data-basic-values-number-formatter") {
+          NumberFormatterSample()
+        }
       ]),
     SampleSection(
+      id: "contacts",
       title: "Contacts",
       samples: [
-        SampleItem("CNContactStore") { CNContactStoreSample() }
+        SampleItem("CNContactStore", id: "contacts-cn-contact-store") { CNContactStoreSample() }
       ]),
     SampleSection(
-      id: "Shapes-AnimatingBorder",
+      id: "shapes-animating-border",
       title: "Shapes",
       samples: [
-        SampleItem("AnimatingBorder") { AnimatingBorderSample() }
+        SampleItem("AnimatingBorder", id: "shapes-animating-border-animating-border") {
+          AnimatingBorderSample()
+        }
       ]),
     SampleSection(
-      id: "View-Sheet",
+      id: "view-sheet",
       title: "View",
       samples: [
-        SampleItem(".sheet") { SheetSample() }
+        SampleItem(".sheet", id: "view-sheet-sheet") { SheetSample() }
       ]),
     SampleSection(
+      id: "liquid-glass",
       title: "LiquidGlass",
       samples: [
-        SampleItem("GlassEffectContainer") { GlassEffectContainerSample() }
+        SampleItem("GlassEffectContainer", id: "liquid-glass-glass-effect-container") {
+          GlassEffectContainerSample()
+        }
       ]),
     SampleSection(
-      id: "Images-SymbolShadow",
+      id: "images-symbol-shadow",
       title: "Images",
       samples: [
-        SampleItem("SymbolImage Shadow") { SymbolImageShadowSample() }
+        SampleItem("SymbolImage Shadow", id: "images-symbol-shadow-symbol-image-shadow") {
+          SymbolImageShadowSample()
+        }
       ]),
   ]
 

@@ -1,0 +1,10 @@
+included:
+  - Project.swift
+  - Tuist.swift
+  - Tuist/Package.swift
+  - SwiftUIPlayground
+
+excluded:
+  - Derived
+  - SwiftUIPlayground.xcodeproj
+  - SwiftUIPlayground.xcworkspace

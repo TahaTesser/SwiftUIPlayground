@@ -7,7 +7,7 @@ let project = Project(
             name: "SwiftUIPlayground",
             destinations: .iOS,
             product: .app,
-            bundleId: "dev.tuist.SwiftUIPlayground",
+            bundleId: "com.tahatesser.SwiftUIPlayground",
             infoPlist: .extendingDefault(
                 with: [
                     "UILaunchScreen": [
@@ -32,7 +32,7 @@ let project = Project(
             name: "SwiftUIPlaygroundTests",
             destinations: .iOS,
             product: .unitTests,
-            bundleId: "dev.tuist.SwiftUIPlaygroundTests",
+            bundleId: "com.tahatesser.SwiftUIPlaygroundTests",
             infoPlist: .default,
             buildableFolders: [
                 "SwiftUIPlayground/Tests"

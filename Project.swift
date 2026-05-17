@@ -24,7 +24,7 @@ let project = Project(
             settings: .settings(
                 base: [
                     "ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS": "YES",
-                    "SWIFT_VERSION": "6.0"
+                    "SWIFT_VERSION": "6.3"
                 ]
             )
         ),
@@ -40,7 +40,7 @@ let project = Project(
             dependencies: [.target(name: "SwiftUIPlayground")],
             settings: .settings(
                 base: [
-                    "SWIFT_VERSION": "6.0"
+                    "SWIFT_VERSION": "6.3"
                 ]
             )
         )

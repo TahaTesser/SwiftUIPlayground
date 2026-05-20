@@ -300,12 +300,11 @@ public struct SampleSection: Identifiable {
         SampleItem("Minimal Dependency", id: "optimization-minimal-dependency") {
           MinimalDependencySample()
         },
+        SampleItem("@State Observable", id: "optimization-state-observable") {
+          StateObservableSample()
+        },
         SampleItem("Value Reference", id: "optimization-value-reference") {
-          AnimalModal(animals: [
-            Animal(id: 1, name: "Whale"),
-            Animal(id: 2, name: "Crab"),
-            Animal(id: 3, name: "T-Rex")
-          ])
+          AnimalModal()
         }
       ]),
     SampleSection(

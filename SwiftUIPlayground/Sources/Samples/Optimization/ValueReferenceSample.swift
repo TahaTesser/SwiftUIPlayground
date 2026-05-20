@@ -10,6 +10,7 @@ import SwiftUI
 struct Animal: Identifiable, Equatable {
     var id: Int
     var name: String
+    var scientificName: String
 }
 
 @Observable class AnimalListSettingsProvider {
@@ -29,35 +30,45 @@ struct SettingsView: View {
     }
 }
 
+struct AnimalRow: View {
+    let animal: Animal
+    let settings: AnimalListSettingsProvider
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(animal.name)
+            
+            if settings.showScientificNames {
+                Text(animal.scientificName)
+            }
+        }
+    }
+}
 
 
 struct AnimalModal: View {
-    let animals: [Animal]
+    let animals: [Animal] = [
+        Animal(id: 1, name: "Whale", scientificName: "Balaenoptera musculus"),
+        Animal(id: 2, name: "Crab", scientificName: "Cancer pagurus"),
+        Animal(id: 3, name: "T-Rex", scientificName: "Tyrannosaurus rex")
+    ]
     
-    @State private var selectedAnimal = Animals()
+    
     
     @State private var showSettings = false
     
     @State private var settings = AnimalListSettingsProvider()
     
     
-    struct Animals {
-        var animalIDs: Set<Animal.ID> = [
-            Animal(id: 1, name: "Whale").id,
-            Animal(id: 1, name: "Crab").id
-        ]
-        var notes = ""
-    }
     
     var body: some View {
         NavigationStack {
-            List(animals) { animal in
-                Text(animal.name)
+            List {
+                ForEach(animals) { animal in
+                    AnimalRow(animal: animal, settings: settings)
+                }
             }
-            .safeAreaBar(edge: .bottom) {
-                TextField("Field notes", text: $selectedAnimal.notes)
-                    .padding()
-            }
+            
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button {
@@ -76,6 +87,6 @@ struct AnimalModal: View {
 
 #Preview {
     NavigationStack {
-        AnimalModal(animals: [Animal(id: 1, name: "Whale"), Animal(id: 2, name: "Crab"), Animal(id: 3, name: "T-Rex")])
+        AnimalModal()
     }
 }

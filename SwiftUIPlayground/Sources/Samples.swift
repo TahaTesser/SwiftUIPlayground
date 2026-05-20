@@ -288,6 +288,27 @@ public struct SampleSection: Identifiable {
         }
       ]),
     SampleSection(
+      id: "optimization",
+      title: "Optimization",
+      samples: [
+        SampleItem("Custom Modifier", id: "optimization-custom-modifier") {
+          CustomModifierSample()
+        },
+        SampleItem("Focused View Components", id: "optimization-focused-view-components") {
+          AirportDetails(airport: Airport(id: .TLL, code: .TLL))
+        },
+        SampleItem("Minimal Dependency", id: "optimization-minimal-dependency") {
+          MinimalDependencySample()
+        },
+        SampleItem("Value Reference", id: "optimization-value-reference") {
+          AnimalModal(animals: [
+            Animal(id: 1, name: "Whale"),
+            Animal(id: 2, name: "Crab"),
+            Animal(id: 3, name: "T-Rex")
+          ])
+        }
+      ]),
+    SampleSection(
       id: "images-symbol-shadow",
       title: "Images",
       samples: [

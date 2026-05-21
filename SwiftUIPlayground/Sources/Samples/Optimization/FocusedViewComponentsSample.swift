@@ -9,13 +9,13 @@ import SwiftUI
 
 struct Airport: Identifiable, Equatable {
     enum Code: String {
-        case HEL = "HEL"
-        case TLL = "TLL"
-        case BER = "BER"
-        case AMS = "AMS"
-        case CDG = "CDG"
+        case HEL
+        case TLL
+        case BER
+        case AMS
+        case CDG
     }
-    
+
     let id: Code
     let code: Code
 }
@@ -45,11 +45,11 @@ extension View {
 
 struct AirportSection: View {
     let airportCode: Airport.Code
-    
+
     var airportName: String? {
         AirportProvider.airportName(for: airportCode)
     }
-    
+
     var body: some View {
         if let airportName {
             Text(airportName)
@@ -69,23 +69,22 @@ extension EnvironmentValues {
     }
 }
 
-
 struct AirportDetails: View {
     let airport: Airport
-    
+
     @Environment(\.airportWatchlist)
     private var watchlist
-    
+
     private var isWatchlisted: Bool {
         watchlist.contains(airport.id)
     }
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
                     AirportSection(airportCode: airport.code)
-                    
+
                     if isWatchlisted {
                         Text("This airport is in your watchlist.")
                             .font(.subheadline)
@@ -101,11 +100,10 @@ struct AirportDetails: View {
                 }
             }
         }
-        
-    }
-    
-}
 
+    }
+
+}
 
 #Preview {
     NavigationStack {

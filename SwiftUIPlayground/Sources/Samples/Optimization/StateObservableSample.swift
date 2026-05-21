@@ -10,7 +10,7 @@ import SwiftUI
 private struct ToggleModelIdentity: Identifiable, Hashable {
     let id: Int
     let title: String
-    
+
     static let samples = [
         ToggleModelIdentity(id: 1, title: "First"),
         ToggleModelIdentity(id: 2, title: "Second"),
@@ -24,7 +24,7 @@ private final class ToggleProvider {
     let createdAt = Date()
     var toggleOne = false
     var toggleTwo = true
-    
+
     init(id: ToggleModelIdentity.ID) {
         self.id = id
         toggleOne = id.isMultiple(of: 2)
@@ -34,9 +34,9 @@ private final class ToggleProvider {
 
 private struct ToggleList: View {
     let modelID: ToggleModelIdentity.ID
-    
+
     @State private var toggleProvider: ToggleProvider?
-    
+
     var body: some View {
         List {
             if let toggleProvider {
@@ -45,13 +45,13 @@ private struct ToggleList: View {
                     Text("Created \(toggleProvider.createdAt.formatted(date: .omitted, time: .standard))")
                         .foregroundStyle(.secondary)
                 }
-                
+
                 Section("Values") {
                     Text("Toggle One: \(toggleProvider.toggleOne ? "On" : "Off")")
                     Button("Toggle One") {
                         toggleProvider.toggleOne.toggle()
                     }
-                    
+
                     Text("Toggle Two: \(toggleProvider.toggleTwo ? "On" : "Off")")
                     Button("Toggle Two") {
                         toggleProvider.toggleTwo.toggle()
@@ -67,13 +67,13 @@ private struct ToggleList: View {
                 toggleProvider = ToggleProvider(id: modelID)
             }
         }
-        
+
     }
 }
 
 struct StateObservableSample: View {
     @State private var selectedModelID = ToggleModelIdentity.samples[0].id
-    
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -84,7 +84,7 @@ struct StateObservableSample: View {
                 }
                 .pickerStyle(.segmented)
                 .padding()
-                
+
                 ToggleList(modelID: selectedModelID)
             }
             .navigationTitle("@State Observable")

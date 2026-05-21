@@ -9,12 +9,12 @@ import SwiftUI
 
 private struct Movie: Identifiable, Equatable {
     enum Title: String {
-        case AVG = "AVG"
-        case LOTR = "LOTR"
-        case CON = "CON"
-        
+        case AVG
+        case LOTR
+        case CON
+
     }
-    
+
     let id: Title
     let code: Title
 }
@@ -25,20 +25,19 @@ private class MovieProvider {
         case .AVG: return "Avengers"
         case .LOTR: return "Lord of the Rings"
         case .CON: return "Conjuring"
-            
+
         }
     }
 }
 
-
 private struct MovieSection: View {
     let movie: Movie.Title
-    
+
     var movieTitle: String? {
         MovieProvider.title(for:
                                 movie)
     }
-    
+
     var body: some View {
         if let movieTitle {
             Text(movieTitle)
@@ -49,7 +48,7 @@ private struct MovieSection: View {
 
 struct MoviePicker: View {
     @Binding var showPicker: Bool
-    
+
     var body: some View {
         Button("Pick a movie") {
             showPicker.toggle()
@@ -71,8 +70,6 @@ struct MinimalDependencySample: View {
         .navigationTitle("Movies")
     }
 }
-
-
 
 #Preview {
     NavigationStack {

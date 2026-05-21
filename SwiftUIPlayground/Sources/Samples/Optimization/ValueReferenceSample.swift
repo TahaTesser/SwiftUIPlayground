@@ -20,11 +20,11 @@ struct Animal: Identifiable, Equatable {
 
 struct SettingsView: View {
     @Bindable var settings: AnimalListSettingsProvider
-    
+
     var body: some View {
         NavigationStack {
             Form {
-                
+
             }
         }
     }
@@ -33,11 +33,11 @@ struct SettingsView: View {
 struct AnimalRow: View {
     let animal: Animal
     let settings: AnimalListSettingsProvider
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text(animal.name)
-            
+
             if settings.showScientificNames {
                 Text(animal.scientificName)
             }
@@ -45,22 +45,17 @@ struct AnimalRow: View {
     }
 }
 
-
 struct AnimalModal: View {
     let animals: [Animal] = [
         Animal(id: 1, name: "Whale", scientificName: "Balaenoptera musculus"),
         Animal(id: 2, name: "Crab", scientificName: "Cancer pagurus"),
         Animal(id: 3, name: "T-Rex", scientificName: "Tyrannosaurus rex")
     ]
-    
-    
-    
+
     @State private var showSettings = false
-    
+
     @State private var settings = AnimalListSettingsProvider()
-    
-    
-    
+
     var body: some View {
         NavigationStack {
             List {
@@ -68,7 +63,7 @@ struct AnimalModal: View {
                     AnimalRow(animal: animal, settings: settings)
                 }
             }
-            
+
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button {

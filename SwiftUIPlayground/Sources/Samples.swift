@@ -31,8 +31,7 @@ public struct SampleSection: Identifiable {
   }
 }
 
-@MainActor public enum SampleCatalog {
-  public static let sections: [SampleSection] = [
+@MainActor private let sampleSections: [SampleSection] = [
     SampleSection(
       id: "buttons",
       title: "Buttons",
@@ -315,7 +314,10 @@ public struct SampleSection: Identifiable {
           SymbolImageShadowSample()
         }
       ])
-  ]
+]
+
+@MainActor public enum SampleCatalog {
+  public static let sections: [SampleSection] = sampleSections
 
   public static var rootItems: [SampleItem] {
     sections.map { section in
